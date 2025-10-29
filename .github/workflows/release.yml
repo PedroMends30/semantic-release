@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main  # Ou qualquer outra branch que você usa para lançar versões
+      - main
 
 jobs:
   release:
@@ -16,12 +16,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '24.10.0'  # Ajuste conforme necessário
+          node-version: '24.10.0'  # ou outra versão que você usa
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # O token do GitHub já está configurado automaticamente
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
