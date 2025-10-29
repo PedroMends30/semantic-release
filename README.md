@@ -1,2 +1,2 @@
-# semantic-release
-Repositório de teste para o aprendizado de semantic release, automatizaod com 
+# Semantic Release
+Repositório de teste para o aprendizado de semantic release, automatizado com Github Actions
